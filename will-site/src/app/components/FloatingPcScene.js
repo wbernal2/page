@@ -44,11 +44,11 @@ function FloatingPcWrapper() {
 export default function FloatingComputerScene() {
   return (
     <Canvas
-      style={{ height: '100vh', width: '100%' }}
-      camera={{ position: [0, 0, 8], fov: 50 }}
+      style={{ height: '110vh', width: '100%' }}
+      camera={{ position: [1, 1, 10], fov: 50 }}
     >
       {/* Lighting Setup */}
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={1.2} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       
       {/* Render the model with both mouse and scroll-based rotation */}

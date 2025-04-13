@@ -1,5 +1,23 @@
 /* src/app/home/Home.module.css */
+/* src/app/home/Home.module.css */
 
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    backdrop-filter: blur(8px);
+    border-top: 5px solid #444;
+    border-bottom: 5px solid #444;
+  }
+  
 /* Container for the entire home page */
 .container {
     background-color: #111;
@@ -139,3 +157,12 @@
     background-color: #111; /* Fallback background */
   }
   
+  .floatingScene {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 100px; /* Optional: Set a maximum width */
+    height: 500px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Prevent overflow if needed */
+    position: relative; /* Ensure proper positioning */
+    background-color: #000; /* Optional: Add a background color */
+}

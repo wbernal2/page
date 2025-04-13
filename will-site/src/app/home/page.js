@@ -5,9 +5,15 @@ import styles from './Home.module.css';
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
+
+      <header className={styles.banner}>
+        🚀 Welcome to Will's Portfolio
+      </header>
       {/* Floating Computer Scene overlay */}
-      <div className={styles.floatingScene}>
+      
+      <div className="floatingScene">
         <FloatingPcScene />
       </div>
 
