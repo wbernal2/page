@@ -1,0 +1,19 @@
+/* src/components/AboutMe.module.css */
+.about {
+    padding: 2rem;
+    background-color: #222;
+    color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6ec4;
+  }
+  
+  .about p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  
