@@ -8,8 +8,8 @@ import FloatingPc from './FloatingPc';
 
 function FloatingPcWrapper() {
   const modelRef = useRef();
-  // Load the GLB file from /models/3dComputer.glb
-  const { scene } = useGLTF('/models/3dComputer.glb');
+  // Load the GLB file from /Models/3dComputer.glb
+  const { scene } = useGLTF('/Models/3dComputer.glb');
   const [scrollOffset, setScrollOffset] = useState(0);
 
   // Listen to scroll events to update the scroll offset state.
@@ -61,4 +61,4 @@ export default function FloatingComputerScene() {
 }
 
 // Preload the model to speed up future loads.
-useGLTF.preload('/models/3dComputer.glb');
+useGLTF.preload('/Models/3dComputer.glb');
