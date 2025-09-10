@@ -1,6 +1,5 @@
 // src/app/components/Education.js
 import styles from './Education.module.css';
-import FloatingPcScene from './FloatingPcScene';
 
 export default function Education() {
   return (
@@ -32,7 +31,11 @@ export default function Education() {
           </div>
           <div className={styles.modelContent}>
             <div className={styles.modelContainer}>
-              <FloatingPcScene />
+              <div className={styles.placeholderContent}>
+                <div className={styles.icon}>💻</div>
+                <h3>Computer Science</h3>
+                <p>Building the future through code</p>
+              </div>
             </div>
           </div>
         </div>
