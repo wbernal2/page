@@ -1,19 +1,38 @@
 // src/app/components/Skills.js
 import styles from './Skills.module.css';
-import { skills } from '../data/projects';
 
-const SkillBar = ({ skill }) => (
+const skillsData = {
+  languages: [
+    { name: "JavaScript", icon: "⚡" },
+    { name: "Python", icon: "🐍" },
+    { name: "TypeScript", icon: "📘" },
+    { name: "Java", icon: "☕" },
+    { name: "C++", icon: "⚙️" },
+    { name: "SQL", icon: "🗃️" },
+    { name: "HTML/CSS", icon: "🎨" }
+  ],
+  frameworks: [
+    { name: "React", icon: "⚛️" },
+    { name: "Next.js", icon: "▲" },
+    { name: "Node.js", icon: "💚" },
+    { name: "Express", icon: "🚀" },
+    { name: "React Native", icon: "📱" },
+    { name: "TensorFlow", icon: "🧠" }
+  ],
+  tools: [
+    { name: "Git", icon: "📝" },
+    { name: "Docker", icon: "🐳" },
+    { name: "AWS", icon: "☁️" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "PostgreSQL", icon: "🐘" },
+    { name: "Figma", icon: "🎯" }
+  ]
+};
+
+const SkillItem = ({ skill }) => (
   <div className={styles.skillItem}>
-    <div className={styles.skillHeader}>
-      <span className={styles.skillName}>{skill.name}</span>
-      <span className={styles.skillLevel}>{skill.level}%</span>
-    </div>
-    <div className={styles.skillBarContainer}>
-      <div 
-        className={styles.skillBar} 
-        style={{ width: `${skill.level}%` }}
-      ></div>
-    </div>
+    <div className={styles.skillIcon}>{skill.icon}</div>
+    <span className={styles.skillName}>{skill.name}</span>
   </div>
 );
 
@@ -22,7 +41,7 @@ const SkillCategory = ({ title, skillList }) => (
     <h3 className={styles.categoryTitle}>{title}</h3>
     <div className={styles.skillsGrid}>
       {skillList.map((skill, index) => (
-        <SkillBar key={index} skill={skill} />
+        <SkillItem key={index} skill={skill} />
       ))}
     </div>
   </div>
@@ -36,15 +55,15 @@ export default function Skills() {
         <div className={styles.skillsContainer}>
           <SkillCategory 
             title="Programming Languages" 
-            skillList={skills.languages} 
+            skillList={skillsData.languages} 
           />
           <SkillCategory 
             title="Frameworks & Libraries" 
-            skillList={skills.frameworks} 
+            skillList={skillsData.frameworks} 
           />
           <SkillCategory 
             title="Tools & Technologies" 
-            skillList={skills.tools} 
+            skillList={skillsData.tools} 
           />
         </div>
       </div>

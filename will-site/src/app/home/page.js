@@ -3,9 +3,9 @@
 
 import FloatingPcScene from '../components/FloatingPcScene';
 import Navigation from '../components/Navigation';
-import AboutMe from '../components/AboutMe';
+import Education from '../components/Education';
 import ProjectsList from '../components/ProjectsList';
-import SchoolWork from '../components/SchoolWork';
+import Courses from '../components/Courses';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import styles from './Home.module.css';
@@ -52,14 +52,29 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroVisual}>
-            <FloatingPcScene />
+            <div className={styles.profilePhotoLarge}>
+              <div className={styles.photoPlaceholderLarge}>
+                <span className={styles.photoEmojiLarge}>👨‍💻</span>
+              </div>
+            </div>
+            <div className={styles.aboutMeSection}>
+              <a 
+                href="/about" 
+                className={styles.aboutMeLink}
+              >
+                <span className={styles.aboutMeText}>About Me</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <AboutMe />
+      <Education />
       <ProjectsList />
-      <SchoolWork />
+      <Courses />
       <Skills />
       <Contact />
       

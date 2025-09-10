@@ -22,14 +22,14 @@ export default function Navigation() {
         
         <div className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
           <a 
-            href="#about" 
+            href="#education" 
             className={styles.menuItem}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('about');
+              scrollToSection('education');
             }}
           >
-            About
+            Education
           </a>
           <a 
             href="#projects" 
@@ -42,14 +42,14 @@ export default function Navigation() {
             Projects
           </a>
           <a 
-            href="#schoolwork" 
+            href="#courses" 
             className={styles.menuItem}
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('schoolwork');
+              scrollToSection('courses');
             }}
           >
-            Academic Work
+            Courses
           </a>
           <a 
             href="#skills" 

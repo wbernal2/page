@@ -35,7 +35,7 @@
   margin-bottom: 3rem;
 }
 
-.otherProjectsTitle {
+.moreProjectsTitle {
   text-align: center;
   font-size: 1.8rem;
   color: #374151;
@@ -43,10 +43,46 @@
   font-weight: 600;
 }
 
-.otherProjectsGrid {
+.moreProjectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.viewMoreSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.viewMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.viewMoreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.viewMoreButton:active {
+  transform: translateY(0);
+}
+
+.viewMoreButton svg {
+  transition: transform 0.2s ease;
 }
 
 .projectCard {
@@ -56,6 +92,10 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .projectCard:hover {
@@ -98,85 +138,19 @@
 
 .cardContent {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .projectTitle {
   font-size: 1.25rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.75rem;
-}
-
-.projectDescription {
-  color: #64748b;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tech {
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 0.25rem 0.75rem;
-  border-radius: 16px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.techMore {
-  background: #f3f4f6;
-  color: #6b7280;
-  padding: 0.25rem 0.75rem;
-  border-radius: 16px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.cardActions {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.actionButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s ease;
-  border: 1px solid #d1d5db;
-  color: #374151;
-}
-
-.actionButton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.primaryButton {
-  background: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
-}
-
-.primaryButton:hover {
-  background: #2563eb;
-  border-color: #2563eb;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .featuredGrid,
-  .otherProjectsGrid {
+  .moreProjectsGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -191,6 +165,11 @@
   
   .cardContent {
     padding: 1.25rem;
+  }
+  
+  .viewMoreButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
   

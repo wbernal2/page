@@ -9,18 +9,8 @@ export default function AboutMe() {
           <div className={styles.textContent}>
             <h2 className={styles.title}>About Me</h2>
             <p className={styles.intro}>
-              Hi, I'm <span className={styles.highlight}>William Bernal</span>—a passionate software engineer 
-              who loves creating immersive web experiences and solving complex problems through code.
-            </p>
-            <p className={styles.description}>
-              I'm currently pursuing a Computer Science degree, where I've developed a strong foundation 
-              in algorithms, data structures, and software engineering principles. My passion lies in 
-              full-stack development, with particular interests in modern web technologies, machine learning, 
-              and creating intuitive user experiences.
-            </p>
-            <p className={styles.description}>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or working on personal projects that challenge me to grow as a developer.
+              Hi, I'm <span className={styles.highlight}>William Bernal</span>, a Computer Science student 
+              at the University of Nebraska.
             </p>
             <div className={styles.highlights}>
               <div className={styles.highlight_item}>
