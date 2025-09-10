@@ -2,17 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "will-site/next.config.mjs",
-      "use": "@vercel/next",
-      "config": {
-        "zeroConfig": true
-      }
+      "src": "will-site/package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
-    {
-      "handle": "filesystem"
-    },
     {
       "src": "/(.*)",
       "dest": "/will-site/$1"
