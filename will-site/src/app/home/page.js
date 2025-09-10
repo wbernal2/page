@@ -1,51 +1,74 @@
 // src/app/home/page.js
-import FloatingPc from '../components/FloatingPc';
+'use client';
+
 import FloatingPcScene from '../components/FloatingPcScene';
+import Navigation from '../components/Navigation';
+import AboutMe from '../components/AboutMe';
+import ProjectsList from '../components/ProjectsList';
+import SchoolWork from '../components/SchoolWork';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
 import styles from './Home.module.css';
 
 export default function Home() {
   return (
-    
     <div className={styles.container}>
-
-      <header className={styles.banner}>
-        🚀 Welcome to Will's Portfolio
-      </header>
-      {/* Floating Computer Scene overlay */}
+      <Navigation />
       
-      <div className="floatingScene">
-        <FloatingPcScene />
-      </div>
-
       {/* Hero Section */}
       <section className={styles.hero}>
-        <h1 className={styles.heroText}>Welcome back, Will B.</h1>
-      </section>
-
-      {/* About Me Section */}
-      <section className={styles.about}>
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm Will Bernal—a software engineer passionate about creating immersive web experiences.
-          I blend creativity with code to build elegant and functional projects.
-        </p>
-      </section>
-
-      {/* Projects Section */}
-      <section className={styles.projects}>
-        <h2>My Projects</h2>
-        <div className={styles.projectList}>
-          <div className={styles.projectCard}>
-            <h3>Project One</h3>
-            <p>Description of project one.</p>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroTitle}>
+              Hi, I'm <span className={styles.highlight}>Will Bernal</span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              Software Engineer & Computer Science Student
+            </p>
+            <p className={styles.heroDescription}>
+              I build innovative web applications and solve complex problems through elegant code.
+            </p>
+            <div className={styles.heroActions}>
+              <a 
+                href="#projects" 
+                className={styles.primaryButton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                View My Work
+              </a>
+              <a 
+                href="#contact" 
+                className={styles.secondaryButton}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Get In Touch
+              </a>
+            </div>
           </div>
-          <div className={styles.projectCard}>
-            <h3>Project Two</h3>
-            <p>Description of project two.</p>
+          <div className={styles.heroVisual}>
+            <FloatingPcScene />
           </div>
-          {/* Add more project cards as needed */}
         </div>
       </section>
+
+      <AboutMe />
+      <ProjectsList />
+      <SchoolWork />
+      <Skills />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p>&copy; 2024 Will Bernal. Built with Next.js and passion for great design.</p>
+        </div>
+      </footer>
     </div>
   );
 }

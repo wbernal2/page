@@ -1,7 +1,7 @@
-// src/components/ProjectCard.js
-import styles from './ProjectCard.module.css';
+// src/components/ProjectsCard.js
+import styles from './ProjectsCard.module.css';
 
-export default function ProjectCard({ project }) {
+export default function ProjectsCard({ project }) {
   return (
     <div className={styles.card}>
       <h3 className={styles.cardTitle}>{project.title}</h3>
