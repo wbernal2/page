@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "will-site/package.json",
+      "src": "will-site/next.config.mjs",
       "use": "@vercel/next"
     }
   ],
