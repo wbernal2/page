@@ -8,7 +8,7 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 export default function FloatingPc() {
   const computerRef = useRef();
   // Load the GLB model; ensure the file path matches your public folder structure.
-  const { scene } = useGLTF('/Models/3dComputer.glb');
+  const { scene } = useGLTF('/models/3dComputer.glb');
   
   // useThree gives us access to global state – including mouse position.
   const { mouse } = useThree();
@@ -27,4 +27,4 @@ export default function FloatingPc() {
 }
 
 // Preload the model so it is cached.
-useGLTF.preload('/Models/3dComputer.glb');
+useGLTF.preload('/models/3dComputer.glb');

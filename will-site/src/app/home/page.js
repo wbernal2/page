@@ -1,7 +1,7 @@
 // src/app/home/page.js
 'use client';
 
-import FloatingPcScene from '../components/FloatingPcScene';
+// import FloatingPcScene from '../components/FloatingPcScene'; // Removed 3D component
 import Navigation from '../components/Navigation';
 import Education from '../components/Education';
 import ProjectsList from '../components/ProjectsList';
