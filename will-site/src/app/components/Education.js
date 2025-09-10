@@ -1,6 +1,6 @@
 // src/app/components/Education.js
 import styles from './Education.module.css';
-import FloatingPcScene from './FloatingPcScene';
+// import FloatingPcScene from './FloatingPcScene'; // Temporarily disabled
 
 export default function Education() {
   return (
@@ -32,7 +32,9 @@ export default function Education() {
           </div>
           <div className={styles.modelContent}>
             <div className={styles.modelContainer}>
-              <FloatingPcScene />
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#666'}}>
+                💻 3D Model Loading...
+              </div>
             </div>
           </div>
         </div>
