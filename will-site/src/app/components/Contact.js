@@ -7,7 +7,7 @@ export default function Contact() {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Get In Touch</h2>
         <p className={styles.sectionDescription}>
-          I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+          I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about technology.
         </p>
         
         <div className={styles.contactContent}>

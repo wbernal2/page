@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              Hi, I'm <span className={styles.highlight}>Will Bernal</span>
+              Hi, I&apos;m <span className={styles.highlight}>Will Bernal</span>
             </h1>
             <p className={styles.heroSubtitle}>
               Software Engineer & Computer Science Student

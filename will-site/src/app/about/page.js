@@ -32,13 +32,13 @@ export default function About() {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>About Me</h2>
             <p className={styles.paragraph}>
-              Hi! I'm William Bernal, a passionate Computer Science student at the University of Nebraska. 
-              I'm currently pursuing my Bachelor's degree and have developed a strong foundation in software 
+              Hi! I&apos;m William Bernal, a passionate Computer Science student at the University of Nebraska. 
+              I&apos;m currently pursuing my Bachelor&apos;s degree and have developed a strong foundation in software 
               development, algorithms, and data structures.
             </p>
             <p className={styles.paragraph}>
               My journey in computer science began with a curiosity about how technology shapes our world. 
-              Since then, I've been dedicated to learning and applying various programming languages and 
+              Since then, I&apos;ve been dedicated to learning and applying various programming languages and 
               frameworks to create meaningful projects that solve real-world problems.
             </p>
           </section>
@@ -72,8 +72,8 @@ export default function About() {
           <section className={styles.section}>
             <h2 className={styles.sectionTitle}>Goals & Aspirations</h2>
             <p className={styles.paragraph}>
-              I'm passionate about using technology to make a positive impact. My goal is to work on 
-              innovative projects that push the boundaries of what's possible while maintaining a focus 
+              I&apos;m passionate about using technology to make a positive impact. My goal is to work on 
+              innovative projects that push the boundaries of what&apos;s possible while maintaining a focus 
               on user experience and accessibility.
             </p>
             <p className={styles.paragraph}>

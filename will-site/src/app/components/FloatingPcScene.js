@@ -35,7 +35,7 @@ function FloatingPcWrapper() {
   });
 
   return (
-    <group ref={modelRef} scale={[0.6, 0.6, 0.6]}>
+    <group ref={modelRef} scale={[0.7, 0.7, 0.7]}>
       <primitive object={scene} />
     </group>
   );
@@ -44,7 +44,7 @@ function FloatingPcWrapper() {
 export default function FloatingComputerScene() {
   return (
     <Canvas
-      style={{ height: '110vh', width: '100%' }}
+      style={{ height: '100%', width: '100%' }}
       camera={{ position: [1, 1, 10], fov: 50 }}
     >
       {/* Lighting Setup */}

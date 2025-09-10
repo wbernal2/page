@@ -9,7 +9,7 @@ export default function AboutMe() {
           <div className={styles.textContent}>
             <h2 className={styles.title}>About Me</h2>
             <p className={styles.intro}>
-              Hi, I'm <span className={styles.highlight}>William Bernal</span>, a Computer Science student 
+              Hi, I&apos;m <span className={styles.highlight}>William Bernal</span>, a Computer Science student 
               at the University of Nebraska.
             </p>
             <div className={styles.highlights}>
