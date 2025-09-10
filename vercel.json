@@ -1,6 +1,21 @@
 {
-  "buildCommand": "cd will-site && npm run build",
-  "outputDirectory": "will-site/.next",
-  "installCommand": "cd will-site && npm install",
-  "framework": "nextjs"
+  "version": 2,
+  "builds": [
+    {
+      "src": "will-site/next.config.mjs",
+      "use": "@vercel/next",
+      "config": {
+        "zeroConfig": true
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/will-site/$1"
+    }
+  ]
 }
