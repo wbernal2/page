@@ -83,7 +83,7 @@ export default function About() {
           </section>
 
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>When I'm Not Coding</h2>
+            <h2 className={styles.sectionTitle}>When I&apos;m Not Coding</h2>
             <p className={styles.paragraph}>
               Outside of programming, I enjoy exploring new technologies, reading about industry trends, 
               and working on personal projects. I also love collaborating with fellow students on 
