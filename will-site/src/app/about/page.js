@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import styles from './About.module.css';
 
 export default function About() {
@@ -16,9 +17,14 @@ export default function About() {
         <div className={styles.aboutHeader}>
           <div className={styles.profileSection}>
             <div className={styles.profilePhoto}>
-              <div className={styles.photoPlaceholder}>
-                <span className={styles.photoEmoji}>👨‍💻</span>
-              </div>
+              <Image 
+                src="/Will_Selfie.JPG" 
+                alt="William Bernal" 
+                width={200}
+                height={200}
+                className={styles.actualPhoto}
+                priority
+              />
             </div>
             <div className={styles.headerText}>
               <h1 className={styles.name}>William Bernal</h1>

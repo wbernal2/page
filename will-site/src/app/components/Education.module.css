@@ -1,148 +1,140 @@
 /* src/app/components/Education.module.css */
 .education {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 80vh;
+  padding: 0;
+  min-height: 0vh;
   display: flex;
   align-items: center;
+}
+
+.unlBanner {
+  width: 100%;
+  min-height: 400px;
+  background: url('/UNL Banner.png') center 63%/cover no-repeat;
+  background-color: #fc0202;
+  position: relative;
+  overflow: hidden;
+}
+
+.unlBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 4rem;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .textContent {
   max-width: 600px;
+  color: white;
 }
 
 .title {
-  font-size: 2.5rem;
-  color: #1e293b;
+  font-size: 3rem;
+  color: white;
   margin-bottom: 2rem;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .universityInfo {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .universityName {
-  font-size: 1.8rem;
-  color: #3b82f6;
+  font-size: 2.2rem;
+  color: #fef3c7;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .degree {
-  font-size: 1.2rem;
-  color: #374151;
+  font-size: 1.3rem;
+  color: #fef3c7;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
 .status {
-  font-size: 1rem;
-  color: #6b7280;
+  font-size: 1.1rem;
+  color: #fed7aa;
   font-style: italic;
 }
 
 .highlights {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   margin-top: 2rem;
 }
 
 .highlight_item {
   text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 120px;
 }
 
 .number {
   display: block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: #fef3c7;
   margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .label {
-  font-size: 0.9rem;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.modelContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modelContainer {
-  width: 400px;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.placeholderContent {
-  text-align: center;
-  color: #374151;
-}
-
-.placeholderContent .icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.placeholderContent h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #1e293b;
-}
-
-.placeholderContent p {
   font-size: 1rem;
-  color: #6b7280;
-  margin: 0;
+  color: #fed7aa;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
+  .unlBanner::after {
+    display: none;
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
-  .modelContainer {
-    width: 300px;
-    height: 300px;
+  .universityName {
+    font-size: 1.8rem;
   }
   
   .highlights {
-    justify-content: center;
+    flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .highlight_item {
+    min-width: 200px;
   }
 }

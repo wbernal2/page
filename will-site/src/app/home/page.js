@@ -8,6 +8,8 @@ import ProjectsList from '../components/ProjectsList';
 import Courses from '../components/Courses';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
+import AboutMe from '../components/AboutMe';
+import Image from 'next/image';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -53,9 +55,14 @@ export default function Home() {
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.profilePhotoLarge}>
-              <div className={styles.photoPlaceholderLarge}>
-                <span className={styles.photoEmojiLarge}>👨‍💻</span>
-              </div>
+              <Image 
+                src="/Will_Selfie.JPG" 
+                alt="William Bernal" 
+                width={400}
+                height={400}
+                className={styles.actualPhotoLarge}
+                priority
+              />
             </div>
             <div className={styles.aboutMeSection}>
               <a 
@@ -72,6 +79,7 @@ export default function Home() {
         </div>
       </section>
 
+      <AboutMe />
       <Education />
       <ProjectsList />
       <Courses />

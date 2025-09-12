@@ -25,10 +25,7 @@ function FloatingPcWrapper() {
   useFrame((state, delta) => {
     if (modelRef.current) {
       const { mouse } = state; // normalized values between -1 and 1
-      // Apply mouse influence:
-      // - Rotate around Y based on mouse.x
-      // - Rotate around X based on mouse.y
-      // Then add a small additional rotation from scrollOffset.
+
       modelRef.current.rotation.y = mouse.x * (Math.PI / 2) + scrollOffset * 0.0002;
       modelRef.current.rotation.x = mouse.y * (Math.PI / 2);
     }

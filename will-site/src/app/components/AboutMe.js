@@ -1,5 +1,6 @@
 // src/components/AboutMe.js
 import styles from './AboutMe.module.css';
+import Image from 'next/image';
 
 export default function AboutMe() {
   return (
@@ -29,9 +30,14 @@ export default function AboutMe() {
           </div>
           <div className={styles.imageContent}>
             <div className={styles.profileImage}>
-              <div className={styles.imagePlaceholder}>
-                <span className={styles.emoji}>👨‍💻</span>
-              </div>
+              <Image 
+                src="/Will_Selfie.JPG" 
+                alt="William Bernal" 
+                width={300}
+                height={300}
+                className={styles.profilePhoto}
+                priority
+              />
             </div>
           </div>
         </div>

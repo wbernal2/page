@@ -63,6 +63,14 @@
   font-size: 3rem;
 }
 
+.actualPhoto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
 .headerText {
   flex: 1;
 }
