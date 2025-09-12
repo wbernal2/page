@@ -25,14 +25,18 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  color: #000000;
+  font-size: 3rem;
+  font-family: var(--font-display), 'Rubik', sans-serif; /* Using the Rubik font */
+  color: #dc2626; /* Red color to make it more noticeable */
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-weight: 900; /* Heaviest weight for more impact */
+  letter-spacing: -1px; /* More dramatic letter spacing */
+  text-transform: uppercase; /* Make it ALL CAPS for visibility */
 }
 
 .intro {
   font-size: 1.2rem;
+  font-family: 'Arial', sans-serif; /* Keep body text in a different font */
   color: #333333;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -40,7 +44,8 @@
 
 .highlight {
   color: #dc2626;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-display), 'Rubik', sans-serif; /* Using the Rubik font */
 }
 
 .description {

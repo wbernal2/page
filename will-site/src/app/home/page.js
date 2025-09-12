@@ -22,13 +22,10 @@ export default function Home() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              Hi, I&apos;m <span className={styles.highlight}>Will Bernal</span>
+              <span>Hi,</span> I&apos;m <span className={styles.highlight}>Will Bernal</span>
             </h1>
-            <p className={styles.heroSubtitle}>
-              Software Engineer & Computer Science Student
-            </p>
             <p className={styles.heroDescription}>
-              I build innovative web applications and solve complex problems through elegant code.
+              I am a Software Developer
             </p>
             <div className={styles.heroActions}>
               <a 
@@ -58,8 +55,8 @@ export default function Home() {
               <Image 
                 src="/Will_Selfie.JPG" 
                 alt="William Bernal" 
-                width={400}
-                height={400}
+                width={500}
+                height={500}
                 className={styles.actualPhotoLarge}
                 priority
               />
@@ -79,9 +76,9 @@ export default function Home() {
         </div>
       </section>
 
+      <ProjectsList />
       <AboutMe />
       <Education />
-      <ProjectsList />
       <Courses />
       <Skills />
       <Contact />

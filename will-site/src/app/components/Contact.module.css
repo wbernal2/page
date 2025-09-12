@@ -1,7 +1,7 @@
 /* src/app/components/Contact.module.css */
 .contact {
   padding: 4rem 0;
-  background: #1e293b;
+  background: #000000;
   color: white;
 }
 
@@ -16,29 +16,42 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #E41C38; /* Nebraska Red */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sectionTitle.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sectionDescription {
   text-align: center;
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: #ffffff;
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: 0.2s;
 }
 
-.contactContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+.sectionDescription.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .infoItem {
@@ -48,12 +61,20 @@
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E41C38; /* Nebraska Red border */
   transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+}
+
+.infoItem.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .infoItem:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(228, 28, 56, 0.1); /* Nebraska Red with opacity */
   transform: translateY(-2px);
 }
 
@@ -64,7 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #E41C38; /* Nebraska Red */
   border-radius: 12px;
   flex-shrink: 0;
 }
@@ -73,98 +94,20 @@
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 600;
+  color: #E41C38; /* Nebraska Red */
 }
 
 .link {
-  color: #94a3b8;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .link:hover {
-  color: #60a5fa;
-}
-
-.contactForm {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.label {
-  font-weight: 500;
-  color: #e2e8f0;
-  font-size: 0.95rem;
-}
-
-.input,
-.textarea {
-  padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
-
-.input:focus,
-.textarea:focus {
-  outline: none;
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
-}
-
-.input::placeholder,
-.textarea::placeholder {
-  color: #94a3b8;
-}
-
-.textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submitButton {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.submitButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-}
-
-.submitButton:active {
-  transform: translateY(0);
+  color: #E41C38; /* Nebraska Red */
 }
 
 @media (max-width: 768px) {
-  .contactContent {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
   .container {
     padding: 0 1rem;
   }
@@ -173,17 +116,21 @@
     font-size: 2rem;
   }
   
-  .contactForm {
-    padding: 1.5rem;
-  }
-  
   .infoItem {
     padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
   
   .icon {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .infoText {
+    text-align: center;
   }
 }

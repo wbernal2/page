@@ -8,7 +8,7 @@ export default function AboutMe() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <h2 className={styles.title}>About Me</h2>
+            <h2 className={styles.title} style={{ fontFamily: "var(--font-display), 'Rubik', sans-serif" }}>About Me</h2>
             <p className={styles.intro}>
               Hi, I&apos;m <span className={styles.highlight}>William Bernal</span>, a Computer Science student 
               at the University of Nebraska.
