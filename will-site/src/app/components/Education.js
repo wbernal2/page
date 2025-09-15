@@ -12,6 +12,7 @@ export default function Education() {
               <div className={styles.universityInfo}>
                 <h3 className={styles.universityName}>University of Nebraska-Lincoln</h3>
                 <p className={styles.degree}>Bachelor of Science in Computer Science</p>
+                <p className={styles.minor}>Mathematics Minor</p>
                 <p className={styles.status}>Currently Enrolled</p>
               </div>
               

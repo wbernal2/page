@@ -17,7 +17,6 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <span className={styles.logoText}>Will Bernal</span>
         </div>
         
         <div className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
@@ -40,16 +39,6 @@ export default function Navigation() {
             }}
           >
             Projects
-          </a>
-          <a 
-            href="#courses" 
-            className={styles.menuItem}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('courses');
-            }}
-          >
-            Courses
           </a>
           <a 
             href="#skills" 

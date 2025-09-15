@@ -9,9 +9,17 @@ import { projects } from '../data/projects';
 const ProjectCard = ({ project }) => (
   <Link href={`/projects/${project.id}`} className={styles.projectCard}>
     <div className={styles.cardImage}>
-      <div className={styles.imagePlaceholder}>
-        <span className={styles.projectIcon}>💻</span>
-      </div>
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={project.title}
+          className={styles.projectImage}
+        />
+      ) : (
+        <div className={styles.imagePlaceholder}>
+          <span className={styles.projectIcon}>💻</span>
+        </div>
+      )}
       {project.featured && (
         <div className={styles.featuredBadge}>Featured</div>
       )}

@@ -5,10 +5,8 @@
 import Navigation from '../components/Navigation';
 import Education from '../components/Education';
 import ProjectsList from '../components/ProjectsList';
-import Courses from '../components/Courses';
-import Skills from '../components/Skills';
+import SkillsShowcase from '../components/SkillsShowcase';
 import Contact from '../components/Contact';
-import AboutMe from '../components/AboutMe';
 import Image from 'next/image';
 import styles from './Home.module.css';
 
@@ -77,10 +75,9 @@ export default function Home() {
       </section>
 
       <ProjectsList />
-      <AboutMe />
       <Education />
-      <Courses />
-      <Skills />
+      <div className="mb-24"></div>
+      <SkillsShowcase className="max-w-6xl mx-auto mb-16" />
       <Contact />
       
       {/* Footer */}

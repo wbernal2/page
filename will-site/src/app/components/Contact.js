@@ -61,12 +61,12 @@ export default function Contact() {
             <div className={styles.infoText}>
               <h3>LinkedIn</h3>
               <a 
-                href="https://linkedin.com/in/william-bernal-651b51201" 
+                href="https://www.linkedin.com/in/williambernal13" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.link}
               >
-                linkedin.com/in/william-bernal
+                linkedin.com/in/williambernal13
               </a>
             </div>
           </div>
@@ -80,12 +80,12 @@ export default function Contact() {
             <div className={styles.infoText}>
               <h3>GitHub</h3>
               <a 
-                href="https://github.com/William7786" 
+                href="https://github.com/wbernal2" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.link}
               >
-                github.com/William7786
+                github.com/wbernal2
               </a>
             </div>
           </div>

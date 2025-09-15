@@ -13,90 +13,81 @@ export default function About() {
         <button onClick={() => router.back()} className={styles.backButton}>
           ← Back to Home
         </button>
-        
-        <div className={styles.aboutHeader}>
-          <div className={styles.profileSection}>
-            <div className={styles.profilePhoto}>
-              <Image 
-                src="/Will_Selfie.JPG" 
-                alt="William Bernal" 
-                width={200}
-                height={200}
-                className={styles.actualPhoto}
-                priority
-              />
-            </div>
-            <div className={styles.headerText}>
-              <h1 className={styles.name}>William Bernal</h1>
-              <p className={styles.title}>Computer Science Student</p>
-              <p className={styles.university}>University of Nebraska</p>
-            </div>
+        <div className={styles.profileCenter}>
+          <div className={styles.flagRow}>
+            <Image
+              src="/usa-flag.svg"
+              alt="USA flag"
+              width={32}
+              height={20}
+              className={styles.flagIcon}
+            />
+            <img
+              src="/Will_Selfie.JPG"
+              alt="Will Bernal"
+              className={styles.profileImage}
+              width={160}
+              height={160}
+            />
+            <Image
+              src="/mexico-flag.svg"
+              alt="Mexico flag"
+              width={32}
+              height={20}
+              className={styles.flagIcon}
+            />
+          </div>
+          <div className={styles.profileName}>Will</div>
+          <div className={styles.profileSummary}>
+            I was raised in a Hispanic household where Spanish is my first language, making me fully bilingual. I thrive in collaborative environments, valuing diverse perspectives and finding motivation among driven, goal-oriented teammates.
+          </div>
+          <div className={styles.profileSummary}>
+            When I&apos;m not coding, my passion for videography allows me to capture moments and tell stories in creative ways. Whether I&apos;m working on VFX, music festival recaps, or cinematic short films and weddings, I focus on delivering visually engaging content.
+          </div>
+          <img
+            src="/about-collage/beach.JPG"
+            alt="Beach travel photo"
+            className={styles.familyImage}
+          />
+          <img
+            src="/about-collage/jump.JPG"
+            alt="Jumping at the beach"
+            className={styles.familyImage}
+          />
+          <div className={styles.profileSummary}>
+            I enjoy traveling, especially to warm destinations where I can relax by the beach.
           </div>
         </div>
 
-        <div className={styles.aboutContent}>
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>About Me</h2>
-            <p className={styles.paragraph}>
-              Hi! I&apos;m William Bernal, a passionate Computer Science student at the University of Nebraska. 
-              I&apos;m currently pursuing my Bachelor&apos;s degree and have developed a strong foundation in software 
-              development, algorithms, and data structures.
-            </p>
-            <p className={styles.paragraph}>
-              My journey in computer science began with a curiosity about how technology shapes our world. 
-              Since then, I&apos;ve been dedicated to learning and applying various programming languages and 
-              frameworks to create meaningful projects that solve real-world problems.
-            </p>
-          </section>
+        <div className={styles.aboutContent}></div>
 
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>My Interests</h2>
-            <div className={styles.interestsGrid}>
-              <div className={styles.interestCard}>
-                <div className={styles.interestIcon}>🌐</div>
-                <h3>Web Development</h3>
-                <p>Creating responsive and interactive web applications using modern frameworks.</p>
-              </div>
-              <div className={styles.interestCard}>
-                <div className={styles.interestIcon}>🤖</div>
-                <h3>Machine Learning</h3>
-                <p>Exploring AI and data science to build intelligent systems and predictive models.</p>
-              </div>
-              <div className={styles.interestCard}>
-                <div className={styles.interestIcon}>📱</div>
-                <h3>Mobile Development</h3>
-                <p>Building cross-platform mobile applications with great user experiences.</p>
-              </div>
-              <div className={styles.interestCard}>
-                <div className={styles.interestIcon}>⚡</div>
-                <h3>Performance Optimization</h3>
-                <p>Optimizing applications for speed, efficiency, and scalability.</p>
-              </div>
+        {/* Collage Section: 3 horizontal panels */}
+        <section className={styles.section}>
+          <div className={styles.collagePanelWrapper}>
+            <div className={styles.collagePanel}>
+              <img
+                src="/about-collage/top.jpg"
+                alt="Top Collage Image"
+                className={styles.collageImage}
+              />
             </div>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>Goals & Aspirations</h2>
-            <p className={styles.paragraph}>
-              I&apos;m passionate about using technology to make a positive impact. My goal is to work on 
-              innovative projects that push the boundaries of what&apos;s possible while maintaining a focus 
-              on user experience and accessibility.
-            </p>
-            <p className={styles.paragraph}>
-              After graduation, I aim to contribute to cutting-edge software development teams where I 
-              can continue learning, growing, and building solutions that matter.
-            </p>
-          </section>
-
-          <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>When I&apos;m Not Coding</h2>
-            <p className={styles.paragraph}>
-              Outside of programming, I enjoy exploring new technologies, reading about industry trends, 
-              and working on personal projects. I also love collaborating with fellow students on 
-              hackathons and open-source contributions.
-            </p>
-          </section>
-        </div>
+            <div className={styles.collagePanel}>
+              <video
+                src="/about-collage/middle.mp4"
+                controls
+                className={styles.collageVideo}
+                poster="/about-collage/video-poster.jpg"
+              />
+            </div>
+            <div className={styles.collagePanel + ' ' + styles.bottom}>
+              <img
+                src="/about-collage/bottom.jpg"
+                alt="Bottom Collage Image"
+                className={styles.collageImage}
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

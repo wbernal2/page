@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: white;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -12,9 +12,8 @@
 }
 
 .backButton {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #E41C38;
+  border: 1px solid #E41C38;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
@@ -25,23 +24,31 @@
 }
 
 .backButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #b91c1c;
+  border-color: #b91c1c;
   transform: translateY(-2px);
 }
 
 .aboutHeader {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 20px;
   padding: 2rem;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .profileSection {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.profileCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0 2.5rem 0;
 }
 
 .profilePhoto {
@@ -52,11 +59,11 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #e9ecef;
 }
 
 .photoEmoji {
@@ -68,7 +75,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #e9ecef;
 }
 
 .headerText {
@@ -78,19 +85,19 @@
 .name {
   font-size: 2.5rem;
   font-weight: bold;
-  color: white;
+  color: #333;
   margin: 0 0 0.5rem 0;
 }
 
 .title {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #666;
   margin: 0 0 0.25rem 0;
 }
 
 .university {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #888;
   margin: 0;
 }
 
@@ -101,22 +108,22 @@
 }
 
 .section {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 20px;
   padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sectionTitle {
   font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  color: #333;
   margin: 0 0 1rem 0;
 }
 
 .paragraph {
-  color: rgba(255, 255, 255, 0.9);
+  color: #555;
   line-height: 1.6;
   margin: 0 0 1rem 0;
   font-size: 1rem;
@@ -134,17 +141,19 @@
 }
 
 .interestCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid #e9ecef;
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .interestCard:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: #f8f9fa;
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .interestIcon {
@@ -153,17 +162,108 @@
 }
 
 .interestCard h3 {
-  color: white;
+  color: #333;
   font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   font-weight: 600;
 }
 
 .interestCard p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #666;
   font-size: 0.9rem;
   line-height: 1.4;
   margin: 0;
+}
+
+
+.flagRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.flagIcon {
+  width: 32px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.profileImage {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profileName {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.profileSummary {
+  margin-top: 1rem;
+  max-width: 500px;
+  text-align: center;
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.familyImage {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Collage styles */
+.collagePanelWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.collagePanel {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collagePanel.bottom {
+  margin-top: 2.5rem;
+}
+
+.collageImage {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.collageVideo {
+  width: 100%;
+  height: 320px;
+  max-height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #000;
+  object-fit: cover;
 }
 
 /* Mobile responsiveness */
