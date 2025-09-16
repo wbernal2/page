@@ -1,7 +1,6 @@
 // src/app/home/page.js
-'use client';
+"use client";
 
-// import FloatingPcScene from '../components/FloatingPcScene'; // Removed 3D component
 import Navigation from '../components/Navigation';
 import Education from '../components/Education';
 import ProjectsList from '../components/ProjectsList';
@@ -9,12 +8,22 @@ import SkillsShowcase from '../components/SkillsShowcase';
 import Contact from '../components/Contact';
 import Image from 'next/image';
 import styles from './Home.module.css';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const keywords = ['Software Developer', 'Learner', 'Teammate'];
+  const [currentKeyword, setCurrentKeyword] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentKeyword((prev) => (prev + 1) % keywords.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Navigation />
-      
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -23,7 +32,10 @@ export default function Home() {
               <span>Hi,</span> I&apos;m <span className={styles.highlight}>Will Bernal</span>
             </h1>
             <p className={styles.heroDescription}>
-              I am a Software Developer
+              I am a{' '}
+              <span style={{ color: '#fff', fontWeight: 700 }}>
+                {keywords[currentKeyword]}
+              </span>
             </p>
             <div className={styles.heroActions}>
               <a 
@@ -35,6 +47,12 @@ export default function Home() {
                 }}
               >
                 View My Work
+              </a>
+              <a 
+                href="/about" 
+                className={styles.secondaryButton}
+              >
+                About Me
               </a>
               <a 
                 href="#contact" 
@@ -59,33 +77,22 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className={styles.aboutMeSection}>
-              <a 
-                href="/about" 
-                className={styles.aboutMeLink}
-              >
-                <span className={styles.aboutMeText}>About Me</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </section>
-
       <ProjectsList />
       <Education />
       <div className="mb-24"></div>
       <SkillsShowcase className="max-w-6xl mx-auto mb-16" />
       <Contact />
-      
       {/* Footer */}
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p>&copy; 2024 Will Bernal. Built with Next.js and passion for great design.</p>
+          <p>&copy; 2024 Will Bernal. Built with Next.js.</p>
         </div>
       </footer>
     </div>
   );
 }
+
+

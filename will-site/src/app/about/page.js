@@ -39,7 +39,7 @@ export default function About() {
           </div>
           <div className={styles.profileName}>Will</div>
           <div className={styles.profileSummary}>
-            I was raised in a Hispanic household where Spanish is my first language, making me fully bilingual. I thrive in collaborative environments, valuing diverse perspectives and finding motivation among driven, goal-oriented teammates.
+            I’m fully bilingual (Spanish/English). I thrive in collaborative settings and draw a lot of motivation from working with driven, goal-oriented teammates who bring diverse perspectives.
           </div>
           <div className={styles.profileSummary}>
             When I&apos;m not coding, my passion for videography allows me to capture moments and tell stories in creative ways. Whether I&apos;m working on VFX, music festival recaps, or cinematic short films and weddings, I focus on delivering visually engaging content.

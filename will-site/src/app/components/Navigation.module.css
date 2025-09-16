@@ -11,14 +11,14 @@
   transition: all 0.3s ease;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .logo {
   font-size: 1.5rem;
@@ -33,11 +33,13 @@
   background-clip: text;
 }
 
-.menu {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
+  .menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
 .menuItem {
   text-decoration: none;

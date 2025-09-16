@@ -16,20 +16,9 @@ export default function Navigation() {
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-        </div>
+        {/* Removed logo/name for minimal navigation */}
         
         <div className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
-          <a 
-            href="#education" 
-            className={styles.menuItem}
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('education');
-            }}
-          >
-            Education
-          </a>
           <a 
             href="#projects" 
             className={styles.menuItem}
@@ -39,6 +28,16 @@ export default function Navigation() {
             }}
           >
             Projects
+          </a>
+          <a 
+            href="#education" 
+            className={styles.menuItem}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('education');
+            }}
+          >
+            Education
           </a>
           <a 
             href="#skills" 
@@ -51,8 +50,15 @@ export default function Navigation() {
             Skills
           </a>
           <a 
+            href="/about" 
+            className={styles.menuItem}
+          >
+            About Me
+          </a>
+          <a 
             href="#contact" 
             className={styles.menuItem}
+            style={{ marginLeft: 'auto' }}
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('contact');
