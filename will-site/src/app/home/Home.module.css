@@ -4,14 +4,20 @@
   scroll-behavior: smooth;
 }
 
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  position: relative;
-  overflow: hidden;
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 64px;
+  }
 }
 
 .heroContent {
@@ -27,47 +33,17 @@
 .heroText {
   color: white;
   z-index: 2;
-  text-align: center;
 }
 
 .heroTitle {
-  font-size: 5rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin: 0 0 1rem 0;
   line-height: 1.1;
-  font-family: var(--font-display), 'Rubik', sans-serif;
-}
-
-.heroTitle span:first-child {
-  display: inline-block;
-  animation: waveAnimation 2.5s infinite;
-  transform-origin: 70% 70%;
-}
-
-@keyframes waveAnimation {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
 }
 
 .highlight {
-  color: white;
-  font-weight: 800;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  position: relative;
-  display: inline-block;
-  animation: popIn 1s ease-out forwards;
-}
-
-@keyframes popIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  60% { transform: scale(1.1); }
-  100% { transform: scale(1); opacity: 1; }
+  color: #fff;
 }
 
 .heroVisual {
@@ -79,25 +55,18 @@
 }
 
 .profilePhotoLarge {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 6px solid rgba(255, 255, 255, 0.5);
+  border: 4px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(15px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  animation: floatAnimation 6s ease-in-out infinite;
-}
-
-@keyframes floatAnimation {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
 }
 
 .profilePhotoLarge::before {
@@ -136,13 +105,6 @@
 
 .photoEmojiLarge {
   font-size: 8rem;
-}
-
-.actualPhotoLarge {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 .aboutMeSection {
@@ -187,6 +149,13 @@
   transform: translateX(2px);
 }
 
+.highlight {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .heroSubtitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -195,37 +164,17 @@
 }
 
 .heroDescription {
-  font-size: 1.6rem;
-  margin: 0 auto 2.5rem auto;
-  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
   line-height: 1.6;
   max-width: 500px;
-  text-align: center;
-  font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeInUp {
-  0% { transform: translateY(20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
 }
 
 .heroActions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
-  animation: fadeIn 1s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.8s;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
 
 .primaryButton,
@@ -271,75 +220,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.contactInfoSection {
-  background: white;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.contactInfoContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.contactInfoTitle {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #000000;
-  font-weight: 700;
-  font-family: var(--font-display), 'Rubik', sans-serif;
-}
-
-.contactInfoGrid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.contactInfoCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  min-width: 250px;
-  transition: all 0.3s ease;
-  border: 1px solid #e5e5e5;
-}
-
-.contactInfoCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.15);
-  border-color: #dc2626;
-}
-
-.contactInfoIcon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #dc2626;
-}
-
-.contactInfoType {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #000000;
-}
-
-.contactInfoValue {
-  color: #333333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contactInfoValue:hover {
-  color: #dc2626;
 }
 
 .footer {
@@ -395,14 +275,5 @@
   .aboutMeLink {
     padding: 0.875rem 1.25rem;
     font-size: 0.9rem;
-  }
-  
-  .contactInfoGrid {
-    gap: 1.5rem;
-  }
-  
-  .contactInfoCard {
-    min-width: 100%;
-    padding: 1.5rem;
   }
 }
