@@ -18,7 +18,7 @@ export default function Education() {
               
               <div className={styles.highlights}>
                 <div className={styles.highlight_item}>
-                  <span className={styles.number}>May 2026</span>
+                  <span className={styles.number}>December 2026</span>
                   <span className={styles.label}>Expected Graduation</span>
                 </div>
               </div>
